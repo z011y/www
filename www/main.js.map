@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/main.ts"],
+  "sourcesContent": ["import \"./base.css\";\n\ndocument.body.innerHTML = `\n  <div>\n    <a href=\"https://vite.dev\" target=\"_blank\">\n    </a>\n    <a href=\"https://www.typescriptlang.org/\" target=\"_blank\">\n    </a>\n    <h1>TypeScript</h1>\n    <div class=\"card\">\n      <button id=\"counter\" type=\"button\"></button>\n    </div>\n    <p class=\"read-the-docs\">\n      Click on the Vite and TypeScript logos to learn more\n    </p>\n  </div>\n`;\n"],
+  "mappings": ";;;;AAEA,WAAS,KAAK,YAAY;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;",
+  "names": []
+}
