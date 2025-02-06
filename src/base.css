@@ -1,79 +1,134 @@
 @font-face {
-  font-family: 'BluuNext-Bold';
-  src: url('../assets/fonts/BluuNext-Bold.otf') format('opentype');
+    font-family: 'BluuNext-Bold';
+    src: url('../assets/fonts/BluuNext-Bold.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'BluuNext-Bolditalic';
-  src: url('../assets/fonts/BluuNext-Bolditalic.otf') format('opentype');
+    font-family: 'BluuNext-Bolditalic';
+    src: url('../assets/fonts/BluuNext-Bolditalic.otf') format('opentype');
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@font-face {
+    font-family: 'YoungSerif-Regular';
+    src: url('../assets/fonts/YoungSerif-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'LilGrotesk';
+    src: url('../assets/fonts/LilGrotesk[wght].ttf') format('truetype');
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    --primary-50: rgba(245, 243, 255, 1);
+    --primary-100: rgba(237, 233, 255, 1);
+    --primary-200: rgba(220, 214, 255, 1);
+    --primary-300: rgba(193, 181, 255, 1);
+    --primary-400: rgba(156, 139, 248, 1);
+    --primary-500: rgba(108, 90, 244, 1);
+    --primary-600: rgba(90, 71, 232, 1);
+    --primary-700: rgba(72, 50, 212, 1);
+    --primary-800: rgba(57, 37, 178, 1);
+    --primary-900: rgba(42, 26, 143, 1);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    --neutral-0: #FFFFFF;
+    --neutral-50: #FAFAFA;
+    --neutral-100: #F5F5F5;
+    --neutral-200: #EEEEEE;
+    --neutral-300: #E0E0E0;
+    --neutral-400: #BDBDBD;
+    --neutral-500: #9E9E9E;
+    --neutral-600: #757575;
+    --neutral-700: #616161;
+    --neutral-800: #424242;
+    --neutral-900: #212121;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-size: 62.5%; /* Base size for rem units */
+}
+
+:root[data-color-scheme="dark"] {
+    --neutral-0: #000000;
+    --neutral-50: #121212;
+    --neutral-100: #1F1F1F;
+    --neutral-200: #2C2C2C;
+    --neutral-300: #393939;
+    --neutral-400: #464646;
+    --neutral-500: #525252;
+    --neutral-600: #5E5E5E;
+    --neutral-700: #6B6B6B;
+    --neutral-800: #787878;
+    --neutral-900: #848484;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    font-family: LilGrotesk, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+
+    background-color: var(--neutral-50);
+    color: var(--neutral-900);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
 }
 
 h1 {
-  font-family: 'BluuNext-Bold';
-  font-size: 3.2em;
-  line-height: 1.1;
+    font-family: 'YoungSerif-Regular', serif;
+    font-size: 3.2rem;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: var(--primary-500);
+    text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+    color: var(--primary-700);
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    background-color: var(--primary-500);
+    cursor: pointer;
+    transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+    border-color: var(--primary-700);
 }
+
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+    outline: 4px auto -webkit-focus-ring-color;
 }
