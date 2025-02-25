@@ -1,4 +1,4 @@
-import Component from "../_component.ts";
+import Component from "../_Component.ts";
 
 export default class PageLink extends Component {
     static observedAttributes = ["to", "title"];

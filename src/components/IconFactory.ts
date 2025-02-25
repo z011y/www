@@ -1,4 +1,4 @@
-import Component from "../_component.ts";
+import Component from "../_Component.ts";
 
 export default class IconFactory extends Component {
     static observedAttributes = ["icon", "size", "color"];
